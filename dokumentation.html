@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Dokumentation av det här APIet</h1>
+    <h2>Routes</h2>
+
+    <li>
+      GET /users - retunerar alla användare. Behöver en bearer token i
+      authorization header
+    </li>
+    <li>
+      GET /users/{id} - retunerar en användare med ett angivet id. Behöver en
+      bearer token i authorization header
+    </li>
+    <li>
+      GET /me - retunerar din information från bearer token. Behöver en bearer
+      token i authorization header
+    </li>
+    <li>
+      POST /users - skapar en ny användare med hashat lösenord, accepterar JSON
+      objekt på formatet {"firstname": "", "lastname": "", "userId": "",
+      "passwd": ""}. Behöver en bearer token i authorization header
+    </li>
+    <li>
+      POST /login - loggar in på existerande användare. Accepterar JSON-objekt
+      på formatet {"userId": "", "passwd": ""}. Retunerar en JWT Token som varar
+      i 2h
+    </li>
+  </body>
+  <script src="index.js"></script>
+</html>
